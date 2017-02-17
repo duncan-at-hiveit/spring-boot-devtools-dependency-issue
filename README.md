@@ -22,4 +22,4 @@ Exception encountered during context initialization - cancelling refresh attempt
 
 java -jar build/libs/hotreloaddependant-0.0.1-SNAPSHOT.jar
 
-Go through the same process as above, and you'll see that by pure chance this one succeeds by virtue of the dependency being a with a child folder of the hotreload folder.  
+Go through the same process as above, and you'll see that by pure chance this one succeeds by virtue of the dependency being a with a child folder of the hotreload folder.  It works because DefaultSourceFolderUrlFilter matches both the hotreloaddependency AND the hotreload classes folders as resources to reload with a change is made to hotreloaddependency classes alone, and this has all Spring components load up in the same classloaders by chance.
