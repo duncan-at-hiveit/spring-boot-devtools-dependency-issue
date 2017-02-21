@@ -1,3 +1,4 @@
 include 'hotreloaddependency'
 include 'hotreloaddependant'
+include 'bootrun-dependant-template-issue'
 
