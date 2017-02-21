@@ -47,3 +47,7 @@ task listJars {
         configurations.compile.each { File file -> println file.name }
     }
 }
+
+bootRun {
+    addResources = true
+}

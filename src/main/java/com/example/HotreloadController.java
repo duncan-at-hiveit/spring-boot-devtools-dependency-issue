@@ -11,11 +11,19 @@ public class HotreloadController {
     @Autowired
     private Dependency dependency;
 
-    @GetMapping
+    @GetMapping("/")
     public String hello(Model model) {
         String greeting = dependency.getName();
         System.out.println(greeting);
         model.addAttribute("greeting", greeting);
         return "greeting";
+    }
+
+    @GetMapping("/2")
+    public String hello2(Model model) {
+        String greeting = dependency.getName();
+        System.out.println(greeting);
+        model.addAttribute("greeting", greeting);
+        return "greeting2";
     }
 }
